@@ -20,7 +20,7 @@ CC		= cc
 
 FLAGS	= -Wall -Wextra -Werror -Ofast #-fsanitize=address -g
 
-MLX		= MLX42/build/libmlx42.a -Iinclude -lglfw -L"/Users/aben-dhi/.brew/opt/glfw/lib" -fsanitize=address -g
+MLX		= MLX42/build/libmlx42.a -Iinclude -lglfw -L"/Users/aben-dhi/.brew/opt/glfw/lib" #-fsanitize=address -g
 
 .PHONY = all clean fclean re
 

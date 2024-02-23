@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:20:30 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/21 10:43:39 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/02/23 11:21:37 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	draw_env(t_game *game, t_ray *ray)
 		{
 			y_top = HEIGHT - y - 1;
 			mlx_put_pixel(game->game_img, ray->start[0], y_top,
-				ft_pixel2(game->map->c));
+				ray->color);
 		}
 		y++;
 	}
