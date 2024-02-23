@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 17:43:11 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/22 15:05:02 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/02/23 13:04:04 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,7 @@ void	draw_game(t_game *game, t_ray *ray)
 	int	line;
 	int	round[2];
 
-	// exit(1);
-	// printf("%f\n", ray->ra);
-	// printf("%f\n", game->chars[0]->pa);
-	if (!ray->ra)
-	{
-		printf("HERRREEEEEE\n");
-		exit(1);
-	}
 	ray->ra = game->chars[0]->pa - 30 * ((float)M_PI / 180);
-	printf("HERRREEEEEE\n");
 	if (ray->ra < 0)
 		ray->ra += 2 * (float)M_PI;
 	mlx_delete_image(game->mlx, game->game_img);
@@ -49,7 +40,6 @@ void	start(void *param)
 	game = param;
 	keybinds(game);
 	rotate(game, 0.0f, 0);
-	// check_pos(game);
 	game->game_img->enabled = true;
 	draw_game(game, game->chars[0]->ray);
 	free(game->rays);
@@ -65,7 +55,6 @@ void	init_game(t_game *game)
 	game->settings->fov = 1920;
 	draw_map(game);
 	mlx_loop_hook(game->mlx, &start, game);
-	// mlx_loop(game->mlx);
 }
 
 t_game	*alloc_game(t_map *map)
@@ -89,7 +78,6 @@ void	set_z(mlx_image_t *img, int z)
 	int	i;
 
 	i = 0;
-	// printf("count = %zu\n", img->count);
 	while (i < (int)img->count)
 	{
 		img->instances[i].z = z;

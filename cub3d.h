@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:41:37 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/22 13:32:23 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/02/23 13:23:12 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,17 +93,6 @@ typedef struct s_textures
 	float		offset;
 }				t_textures;
 
-// typedef struct s_sprite_vars
-// {
-// 	int		x;
-// 	int		y;
-// 	int		size[2];
-// 	float	t_pos[2];
-// 	float	offset[2];
-// 	float	s_pos[3];
-// 	float	tmp[2];
-// }			t_sprite_vars;
-
 typedef struct s_game
 {
 	t_char		**chars;
@@ -180,6 +169,7 @@ void		start(void *param);
 void		init_game(t_game *game);
 int			ft_error(char *s, int fd);
 u_int32_t	ft_pixel2(char *str);
-void		free_game(t_game *game);
+void		free_arrs(t_game *game);
+void		free_exit(t_game *game);
 
 #endif

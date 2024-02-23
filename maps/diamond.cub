@@ -1,12 +1,12 @@
-SO ./textures/studio4.png
+SO ./textures/IMG_6726.png
 
 C 35,19,73
 
-WE ./textures/studio3.png
+WE ./textures/new_floor.png
 
-NO ./textures/studio3.png
+NO ./textures/new_wall.png
 
-EA ./textures/studio2.png
+EA ./textures/new_wall.png
 
 F 15,6,40
 
