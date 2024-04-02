@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 17:45:43 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/23 13:25:02 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/03/31 18:19:02 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ u_int32_t	*ft_color(mlx_texture_t *texture)
 	color = malloc(sizeof(u_int32_t) * (texture->width + 1)
 			* (texture->height + 1));
 	if (!color)
-		return (ft_error("malloc failed\n", 2) ,NULL);
+		return (ft_error("malloc failed\n", 2), NULL);
 	pos = 0;
 	while (pos < texture->width * texture->height * texture->bytes_per_pixel)
 	{

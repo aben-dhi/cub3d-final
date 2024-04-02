@@ -1,7 +1,7 @@
-NO textures/1.png
-SO textures/2.png
-WE textures/3.png
-EA textures/4.png
+NO textures/new_wall.png
+SO textures/new_floor.png
+WE textures/new_wall.png
+EA textures/new_floor.png
 
 F 255,0,0
 C 0,0,255

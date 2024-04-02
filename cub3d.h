@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:41:37 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/23 13:23:12 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/03/31 18:28:10 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <math.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <stdbool.h>
 # include <fcntl.h>
 # include <unistd.h>
 # include <limits.h>
@@ -171,5 +172,12 @@ int			ft_error(char *s, int fd);
 u_int32_t	ft_pixel2(char *str);
 void		free_arrs(t_game *game);
 void		free_exit(t_game *game);
+void		create_char(t_game *game, int x, int y);
+void		draw_tile(t_game *game, char **map, int *iterator, int *coords);
+void		draw_tiles(t_game *game, char **map);
+void		draw_it(mlx_t *mlx, t_char *c);
+void		draw_char(t_game *game, char **map);
+void		set_z(mlx_image_t *img, int z);
+bool		check_player(char c);
 
 #endif

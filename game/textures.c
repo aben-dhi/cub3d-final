@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:44:28 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/23 13:15:13 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/03/31 17:52:35 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	init_textures(t_game *game)
 	game->textures->wall = ft_color(text);
 	game->textures->wall_size[0] = text->width;
 	game->textures->wall_size[1] = text->height;
+	mlx_delete_texture(text);
 	text = mlx_load_png(game->map->so);
 	game->textures->floor = ft_color(text);
 	mlx_delete_texture(text);

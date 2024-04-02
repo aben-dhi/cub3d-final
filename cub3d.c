@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:42:06 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/23 13:33:24 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/04/01 22:57:15 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	setup_game_data(char **av, t_map *map)
 	return (0);
 }
 
-int	main21(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_map	*map;
 	t_game	*game;
@@ -72,17 +72,17 @@ int	main21(int ac, char **av)
 		game = alloc_game(map);
 		init_game(game);
 		mlx_loop(game->mlx);
+		free_exit(game);
+		free_data(map);
 	}
 	else
 		return (ft_error("Error\nInvalid number of arguments!\n", 2), 1);
-	free_data(map);
-	system("pkill afplay &");
 	return (0);
 }
 
-int main(int ac, char **av)
-{
-	main21(ac, av);
-	// system("leaks cub3D");
-	return 0;
-}
+// int main(int ac, char **av)
+// {
+// 	main21(ac, av);
+// 	system("leaks cub3D");
+// 	return (0);
+// }

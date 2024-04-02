@@ -10,7 +10,8 @@ libft/ft_strtrim.c libft/ft_strjoin.c libft/ft_itoa.c libft/ft_strmapi.c libft/f
 libft/ft_lstnew.c libft/ft_lstadd_front.c libft/ft_lstsize.c libft/ft_lstadd_back.c libft/ft_lstlast.c libft/ft_lstdelone.c libft/ft_lstclear.c libft/ft_lstiter.c libft/ft_lstmap.c \
 libft/ft_isspace.c
 
-MLXSRC	= game/draw.c game/draw_utils.c game/draw_utils2.c game/init.c game/keyhooks.c game/keyhooks_utils.c game/minimap.c game/textures.c game/utils.c game/ft_error.c
+MLXSRC	= game/draw.c game/draw_utils.c game/draw_utils2.c game/init.c game/keyhooks.c game/keyhooks_utils.c game/minimap.c game/textures.c game/utils.c game/ft_error.c \
+game/draw_map_utils.c game/draw_map.c
 
 GNLSRC	= get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
 
@@ -18,9 +19,9 @@ OBJS	= $(SRCS:.c=.o) $(LIBFTSRC:.c=.o)  $(GNLSRC:.c=.o) $(MLXSRC:.c=.o)
 
 CC		= cc
 
-FLAGS	= -Wall -Wextra -Werror -Ofast -fsanitize=address -g
+FLAGS	= -Wall -Wextra -Werror -Ofast #-fsanitize=address -g
 
-MLX		= MLX42/build/libmlx42.a -Iinclude -lglfw -L"/Users/aben-dhi/.brew/opt/glfw/lib" -fsanitize=address -g
+MLX		= MLX42/build/libmlx42.a -Iinclude -lglfw -L"/Users/aben-dhi/.brew/opt/glfw/lib" #-fsanitize=address -g
 
 .PHONY = all clean fclean re
 

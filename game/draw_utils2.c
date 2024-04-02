@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:20:30 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/23 13:25:27 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/04/02 02:52:47 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,8 @@ void	draw_env(t_game *game, t_ray *ray)
 	{
 		get_color(game, ray, game->textures->floor, y - 540);
 		if (!(ray->start[0] < MINIMAP && y < MINIMAP))
-			mlx_put_pixel(game->game_img, ray->start[0], y, ray->color);
+			mlx_put_pixel(game->game_img, ray->start[0], y,
+				ray->color);
 		if (!(ray->start[0] < MINIMAP && (HEIGHT - y) < MINIMAP))
 		{
 			y_top = HEIGHT - y - 1;

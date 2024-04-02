@@ -6,7 +6,7 @@
 /*   By: aben-dhi <aben-dhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 17:46:52 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/22 11:41:20 by aben-dhi         ###   ########.fr       */
+/*   Updated: 2024/03/31 20:23:28 by aben-dhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ void	get_move(t_game *game, t_char *chars)
 	chars->w[1] = roundf(sin(chars->pa) * game->ps);
 	chars->s[0] = chars->w[0] * -1;
 	chars->s[1] = chars->w[1] * -1;
-	chars->a[0] = chars->d[0] * -1;
-	chars->a[1] = chars->d[1] * -1;
 	chars->d[0] = roundf(cos(chars->pa + (float)M_PI / 2) * game->ps);
 	chars->d[1] = roundf(sin(chars->pa + (float)M_PI / 2) * game->ps);
+	chars->a[0] = chars->d[0] * -1;
+	chars->a[1] = chars->d[1] * -1;
 }
 
 void	rotate(t_game *game, float angle, int i)
